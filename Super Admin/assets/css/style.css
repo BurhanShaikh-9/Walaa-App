@@ -1,13 +1,4 @@
-/**
-* Template Name: NiceAdmin - v2.5.0
-* Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 :root {
   scroll-behavior: smooth;
 }
@@ -270,6 +261,7 @@ h6 {
   color: #012970;
   font-family: "Poppins", sans-serif;
 }
+
 
 .card-title span {
   color: #899bbd;
@@ -880,6 +872,10 @@ h6 {
   flex-shrink: 0;
   flex-grow: 0;
 }
+.dashboard .deal-card .card-icon {
+  color: #f02228;
+  background: #fdedee;
+}
 
 .dashboard .sales-card .card-icon {
   color: #c4940b;
@@ -887,7 +883,7 @@ h6 {
 }
 
 .dashboard .revenue-card .card-icon {
-  color: #2eca6a;
+  color: #c4940b  ;
   background: #fff8e6;
 }
 
@@ -1661,3 +1657,53 @@ justify-content: center;
   border-radius: 10px;
 }
 
+.redeemPoints{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.redeemPoints input{
+  width: 50%;
+  height: 40px;
+}
+.redeemPoints button{
+  background-color: white;
+  border: 1px solid rgb(182, 182, 182);
+  outline: none;
+  color: #c4940b;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+}
+
+.card-title a{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: #c4940b !important;
+  cursor: pointer;
+}
+.metaData{
+  background-color: rgb(201, 201, 201);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+#expiryDateReward{
+  display: none;
+}
+#expiryDateReward2{
+  display: none;
+}
+.rewardList{
+  display: flex;
+  gap: 20px;
+}
+.rewardListClass{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
