@@ -30,6 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="  https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css" rel="stylesheet">
 
 
 </head>
@@ -263,19 +264,13 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="subPartner.html">
-          <img class="handshakeNormal" src="/assets/img/dashboard/handshakeNav.png" alt="">
-          <img class="handshakeHover" src="/assets/img/dashboard/handShakeNavHover.png" alt="">
-          <span>Sub Partners</span>
+        <a class="nav-link collapsed" href="category.html">
+          <i class="bi bi-bookmark-heart"></i>
+          <span>Category</span>
         </a>
       </li>
-      <!-- End Components Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="discount.html">
-          <i class="bi bi-tags"></i>
-          <span>Discounts</span>
-        </a>
-      </li>
+      <!-- End Partner Nav -->
+
       <li class="nav-item">
         <a class="nav-link " href="product.html">
           <i class="bi bi-archive"></i>
@@ -285,7 +280,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="DealsOffer.html">
             <i class="bi bi-box2-heart"></i>
-          <span>Deals and Offers</span>
+          <span>Offers</span>
         </a>
       </li>
       <li class="nav-item">
@@ -293,28 +288,34 @@
           <i class="bi bi-bar-chart"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-                <a href="couponReport.html" >
-                    <i class="bi bi-circle"></i><span>Coupon</span>
-                </a>
-            </li>
-    
-            <li>
-                <a href="rewardReport.html">
-                    <i class="bi bi-circle"></i><span>Reward</span>
-                </a>
-            </li>
-    
-            <li>
-                <a href="productReport.html">
-                    <i class="bi bi-circle"></i><span>Product</span>
-                </a>
-            </li>
-            <li>
-                <a href="pointReport.html" >
-                    <i class="bi bi-circle"></i><span>Customer Points</span>
-                </a>
-            </li>
+          <li>
+            <a href="userReport.html">
+              <i class="bi bi-circle"></i><span>Users</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="rewardReport.html">
+              <i class="bi bi-circle"></i><span>Offers</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="productReport.html">
+              <i class="bi bi-circle"></i><span>Product</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="categoryReport.html">
+              <i class="bi bi-circle"></i><span>Categories</span>
+            </a>
+          </li>
+          <li>
+            <a href="pointReport.html">
+              <i class="bi bi-circle"></i><span>Customer Points</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Reports Nav -->
 
@@ -365,71 +366,60 @@
                 <h5 class="card-title">Products</h5>
                 <a href="addProduct.html">Add Products</a>
               </div>
-              <div class="tableFilter">
-                <div class="selectTag">
-                  <select name="entry" id="entryId">
-                    <option value="1">1</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                  </select>
-                  <label for="entryId">entries per page</label>
-                </div>
-                <div class="tableSearch">
-                  <input type="text" name="" id="" placeholder="Search">
-                </div>
-              </div>
-
-              <!-- Default Table -->
               <div class="table-responsive">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Title</th>
-                      <th scope="col">Description</th>
-       
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>discount Name</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, eius?</td>
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>discount Name</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, eius?</td>
-                  
-                     
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>discount Name</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, eius?</td>
-                  
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>discount Name</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, eius?</td>
-                  
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>discount Name</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, eius?</td>                  
-                    </tr>
-                  </tbody>
-                </table>
+              <table id="productTable" class="display" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Branch Name</th>
+                    <th>Points</th>
+                    <th>Prices</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> Nixon</td>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quam.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>200</td>
+                    <td>200OMR</td>
+                    <td>Active</td>
+                  </tr>
+
+                  <tr>
+                    <td> Nixon</td>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quam.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>200</td>
+                    <td>200OMR</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr>
+                    <td> Nixon</td>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quam.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>200</td>
+                    <td>200OMR</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr>
+                    <td> Nixon</td>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quam.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>200</td>
+                    <td>200OMR</td>
+                    <td>Active</td>
+                  </tr>
+                </tbody>
+
+              </table>
               </div>
 
               <!-- End Default Table Example -->
@@ -464,6 +454,14 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="  https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js">
+
+  </script>
+  <script>$(document).ready(function () {
+      $('#productTable').DataTable();
+    });</script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

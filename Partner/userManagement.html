@@ -31,7 +31,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
+  <link href="  https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -263,19 +263,13 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="subPartner.html">
-          <img class="handshakeNormal" src="/assets/img/dashboard/handshakeNav.png" alt="">
-          <img class="handshakeHover" src="/assets/img/dashboard/handShakeNavHover.png" alt="">
-          <span>Sub Partners</span>
+        <a class="nav-link collapsed" href="category.html">
+          <i class="bi bi-bookmark-heart"></i>
+          <span>Category</span>
         </a>
       </li>
-      <!-- End Components Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="discount.html">
-          <i class="bi bi-tags"></i>
-          <span>Discounts</span>
-        </a>
-      </li>
+      <!-- End Partner Nav -->
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="product.html">
           <i class="bi bi-archive"></i>
@@ -284,8 +278,8 @@
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="DealsOffer.html">
-            <i class="bi bi-box2-heart"></i>
-          <span>Deals and Offers</span>
+          <i class="bi bi-box2-heart"></i>
+          <span>Offers</span>
         </a>
       </li>
       <li class="nav-item">
@@ -293,32 +287,38 @@
           <i class="bi bi-bar-chart"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-                <a href="couponReport.html" >
-                    <i class="bi bi-circle"></i><span>Coupon</span>
-                </a>
-            </li>
-    
-            <li>
-                <a href="rewardReport.html">
-                    <i class="bi bi-circle"></i><span>Reward</span>
-                </a>
-            </li>
-    
-            <li>
-                <a href="productReport.html">
-                    <i class="bi bi-circle"></i><span>Product</span>
-                </a>
-            </li>
-            <li>
-                <a href="pointReport.html" >
-                    <i class="bi bi-circle"></i><span>Customer Points</span>
-                </a>
-            </li>
+          <li>
+            <a href="userReport.html">
+              <i class="bi bi-circle"></i><span>Users</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="rewardReport.html">
+              <i class="bi bi-circle"></i><span>Offers</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="productReport.html">
+              <i class="bi bi-circle"></i><span>Product</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="categoryReport.html">
+              <i class="bi bi-circle"></i><span>Categories</span>
+            </a>
+          </li>
+          <li>
+            <a href="pointReport.html">
+              <i class="bi bi-circle"></i><span>Customer Points</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Reports Nav -->
 
-    
+
       <li class="nav-item">
         <a class="nav-link " href="userManagement.html">
           <i class="bi bi-person-gear"></i>
@@ -365,24 +365,11 @@
                 <h5 class="card-title">User Management</h5>
                 <a href="addUser.html">Add User</a>
               </div>
-              <div class="tableFilter">
-                <div class="selectTag">
-                  <select name="entry" id="entryId">
-                    <option value="1">1</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                  </select>
-                  <label for="entryId">entries per page</label>
-                </div>
-                <div class="tableSearch">
-                  <input type="text" name="" id="" placeholder="Search">
-                </div>
-              </div>
+             
 
               <!-- Default Table -->
               <div class="table-responsive">
-                <table class="table">
+                <table id="productTable" class="display" style="width:100%">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -412,7 +399,7 @@
                       <td>8275284584</td>
                       <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dicta?</td>
                       <td> Name</td>
-                     
+
                     </tr>
                     <tr>
                       <th scope="row">3</th>
@@ -438,8 +425,8 @@
                       <td>username@gmail.com</td>
                       <td>******</td>
                       <td>8275284584</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dicta?</td>  
-                      <td> Name</td>          
+                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dicta?</td>
+                      <td> Name</td>
                     </tr>
                   </tbody>
                 </table>
@@ -480,7 +467,13 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="  https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js">
 
+  </script>
+  <script>$(document).ready(function () {
+      $('#productTable').DataTable();
+    });</script>
 </body>
 
 </html>

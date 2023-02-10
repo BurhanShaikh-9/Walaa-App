@@ -262,19 +262,13 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="subPartner.html">
-          <img class="handshakeNormal" src="/assets/img/dashboard/handshakeNav.png" alt="">
-          <img class="handshakeHover" src="/assets/img/dashboard/handShakeNavHover.png" alt="">
-          <span>Sub Partners</span>
+        <a class="nav-link collapsed" href="category.html">
+          <i class="bi bi-bookmark-heart"></i>
+          <span>Category</span>
         </a>
       </li>
-      <!-- End Components Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="discount.html">
-          <i class="bi bi-tags"></i>
-          <span>Discounts</span>
-        </a>
-      </li>
+      <!-- End Partner Nav -->
+
       <li class="nav-item">
         <a class="nav-link " href="product.html">
           <i class="bi bi-archive"></i>
@@ -284,7 +278,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="DealsOffer.html">
             <i class="bi bi-box2-heart"></i>
-          <span>Deals and Offers</span>
+          <span>Offers</span>
         </a>
       </li>
       <li class="nav-item">
@@ -292,28 +286,34 @@
           <i class="bi bi-bar-chart"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-                <a href="couponReport.html" >
-                    <i class="bi bi-circle"></i><span>Coupon</span>
-                </a>
-            </li>
-    
-            <li>
-                <a href="rewardReport.html">
-                    <i class="bi bi-circle"></i><span>Reward</span>
-                </a>
-            </li>
-    
-            <li>
-                <a href="productReport.html">
-                    <i class="bi bi-circle"></i><span>Product</span>
-                </a>
-            </li>
-            <li>
-                <a href="pointReport.html" >
-                    <i class="bi bi-circle"></i><span>Customer Points</span>
-                </a>
-            </li>
+          <li>
+            <a href="userReport.html">
+              <i class="bi bi-circle"></i><span>Users</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="rewardReport.html">
+              <i class="bi bi-circle"></i><span>Offers</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="productReport.html">
+              <i class="bi bi-circle"></i><span>Product</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="categoryReport.html">
+              <i class="bi bi-circle"></i><span>Categories</span>
+            </a>
+          </li>
+          <li>
+            <a href="pointReport.html">
+              <i class="bi bi-circle"></i><span>Customer Points</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Reports Nav -->
 
@@ -323,7 +323,7 @@
           <span>User Management</span>
         </a>
       </li>
-      
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="login.html">
           <i class="bi bi-box-arrow-in-right"></i><span>Logout</span>
@@ -385,14 +385,35 @@
                     </div>
 
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <label for="inputName3" class="form-label">Title</label>
-                      <input type="text" class="form-control" id="inputName3" placeholder="mohammad.ayyub@gmail.com">
+                      <label for="inputName3" class="form-label">Code</label>
+                      <input type="text" class="form-control" id="inputName3" placeholder="1234">
+                    </div>
+       
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <label for="inputName3" class="form-label">Branch Name</label>
+                      <input type="text" class="form-control" id="inputName3" placeholder="Branch">
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <label for="inputName3" class="form-label">Points</label>
+                      <input type="text" class="form-control" id="inputName3" placeholder="20">
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <label for="inputName3" class="form-label">Prices</label>
+                      <input type="text" class="form-control" id="inputName3" placeholder="200OMR">
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <label for="partnerStatus" class="form-label">Status</label>
+                      <select class="form-select" aria-label="Default select example" id="partnerStatus">
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                      </select>
                     </div>
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <label for="inputName4" class="form-label">Description</label>
-                      <input type="text" class="form-control" id="inputName4" placeholder="Desciption">
+                      <label for="inputName3" class="form-label">Description</label>
+                      <input type="text" class="form-control" id="inputName3" placeholder="Description">
                     </div>
-                  
+                   
+
 
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                       <div class="addUserFormButton">
@@ -439,6 +460,13 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
+  </script>
 
 </body>
 
