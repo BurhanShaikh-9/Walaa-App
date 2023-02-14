@@ -1707,3 +1707,29 @@ justify-content: center;
   height: 50px;
   margin-bottom: 10px;
 }
+
+#productSelectId label{
+  display: block;
+}
+#productSelectId .dropdown .dropdown-menu{
+  height: 150px;
+  overflow-y: auto;
+  width: 100%;
+
+}
+
+#productSelectId .dropdown .btn-secondary{
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(196, 195, 195);
+}
+
+#productSelectId .dropdown .dropdown-menu .dropdown-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#productSelectId .dropdown .dropdown-menu .dropdown-item p{
+  margin-bottom: 0;
+}
