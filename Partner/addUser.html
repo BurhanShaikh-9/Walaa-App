@@ -413,16 +413,29 @@
                         </div>
                         <div class="toggleInner">
                           <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="checkBoxSubPartner">
                             <span class="slider round"></span>
                           </label>
                         </div>
                       </div>
                     </div>
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <div class="addPartnerToggle">
-                        <div class="toggleInner">
+                      <div class="addPartnerToggle" id="addCheckbox1">
+                        <!-- <div class="toggleInner">
                           Add Coupons /Offers
+                        </div>
+                        <div class="toggleInner">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <div class="addPartnerToggle" id="addCheckbox2">
+                        <div class="toggleInner">
+                         Reports
                         </div>
                         <div class="toggleInner">
                           <label class="switch">
@@ -433,9 +446,9 @@
                       </div>
                     </div>
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <div class="addPartnerToggle">
+                      <div class="addPartnerToggle" id="addCheckbox3">
                         <div class="toggleInner">
-                         Reports
+                         User Management
                         </div>
                         <div class="toggleInner">
                           <label class="switch">
@@ -491,6 +504,21 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    var select = document.getElementById("checkBoxSubPartner");
+    var inputField1 = document.getElementById("addCheckbox1");
+    var inputField2 = document.getElementById("addCheckbox2");
+    var inputField3 = document.getElementById("addCheckbox3");
+
+    $('#myCheckbox').change(function() {
+      if (select.checked) {
+        $(inputField1).html("<div class='toggleInner'>Add Coupons /Offers</div><div class='toggleInner'><label class='switch'><input type='checkbox'><span class='slider round'></span></label></div>")       
+      } else {
+        $(inputField1).html("")       
+      }
+    });    
+  </script>
 
 </body>
 
