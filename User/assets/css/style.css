@@ -513,7 +513,9 @@ h6 {
 }
 
 .header-nav .nav-profile img {
-  max-height: 36px;
+  width: 40px;
+  object-fit: cover;
+  height: 40px;
 }
 
 .header-nav .nav-profile span {
@@ -1105,7 +1107,9 @@ h6 {
 # Profie Page
 --------------------------------------------------------------*/
 .profile .profile-card img {
-  max-width: 120px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
 
 .profile .profile-card h2 {
@@ -1540,6 +1544,7 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 60%;
 }
 
 .addPartnerToggle .toggleInner  .switch {
