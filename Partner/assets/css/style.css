@@ -513,7 +513,9 @@ h6 {
 }
 
 .header-nav .nav-profile img {
-  max-height: 36px;
+  width: 40px;
+  object-fit: cover;
+  height: 40px;
 }
 
 .header-nav .nav-profile span {
@@ -1105,7 +1107,9 @@ h6 {
 # Profie Page
 --------------------------------------------------------------*/
 .profile .profile-card img {
-  max-width: 120px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
 
 .profile .profile-card h2 {
@@ -1540,6 +1544,7 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 60%;
 }
 
 .addPartnerToggle .toggleInner  .switch {
@@ -1706,30 +1711,4 @@ justify-content: center;
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
-}
-
-#productSelectId label{
-  display: block;
-}
-#productSelectId .dropdown .dropdown-menu{
-  height: 150px;
-  overflow-y: auto;
-  width: 100%;
-
-}
-
-#productSelectId .dropdown .btn-secondary{
-  width: 100%;
-  background-color: white;
-  color: black;
-  border: 1px solid rgb(196, 195, 195);
-}
-
-#productSelectId .dropdown .dropdown-menu .dropdown-item{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#productSelectId .dropdown .dropdown-menu .dropdown-item p{
-  margin-bottom: 0;
 }
