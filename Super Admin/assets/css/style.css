@@ -859,7 +859,7 @@ h6 {
 }
 
 .dashboard .info-card h6 {
-  font-size: 28px;
+  font-size: 20px;
   color: #012970;
   font-weight: 700;
   margin: 0;
@@ -1711,4 +1711,20 @@ justify-content: center;
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
+}
+.cardTitleWidth{
+ width: 90%;
+}
+.dashboard .sales-card .card-icon{
+  color: rgba(255, 0, 0, 0.815);
+  background: #fdedee;
+}
+.giveRewardDiv{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.giveRewardDivInner{
+  display: flex;
+  gap: 10px;
 }

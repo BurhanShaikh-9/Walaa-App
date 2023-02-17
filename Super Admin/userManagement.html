@@ -279,16 +279,16 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="rewards.html">
           <i class="bi bi-gift"></i>
-          <span>Rewards</span>
+          <span>Special Rewards</span>
         </a>
-      </li><!-- End Rewards Nav -->
+      </li><!-- End Special Rewards Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="catergory.html">
           <i class="bi bi-tags"></i>
           <span>Category</span>
         </a>
-      </li><!-- End Rewards Nav -->
+      </li><!-- End Special Rewards Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="approvalList.html">
@@ -399,7 +399,7 @@
                       <label for="inputName3" class="form-label">Email Address</label>
                       <input type="text" class="form-control" id="inputName3" placeholder="mohammad.aryan@gmail.com">
                     </div>
-                   
+
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                       <label for="inputName4" class="form-label">Phone Number</label>
                       <input type="text" class="form-control" id="inputName4" placeholder="0202022222">
@@ -415,78 +415,45 @@
                         </div>
                         <div class="toggleInner">
                           <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="adminRightsCheckbox">
                             <span class="slider round"></span>
                           </label>
                         </div>
                       </div>
                     </div>
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <div class="addPartnerToggle">
-                        <div class="toggleInner">
-                          Reporting Rights
-                        </div>
-                        <div class="toggleInner">
-                          <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <div class="addPartnerToggle">
-                        <div class="toggleInner">
-                          Reward Rights
-                        </div>
-                        <div class="toggleInner">
-                          <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <div class="addPartnerToggle">
-                        <div class="toggleInner">
-                          Category Rights
-                        </div>
-                        <div class="toggleInner">
-                          <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <div class="addPartnerToggle">
-                        <div class="toggleInner">
-                          Add Partner Rights
-                        </div>
-                        <div class="toggleInner">
-                          <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <div class="addPartnerToggle">
-                        <div class="toggleInner">
-                          Add User Rights
-                        </div>
-                        <div class="toggleInner">
-                          <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                          </label>
-                        </div>
+                      <div class="addPartnerToggle" id="reportingToggle">
+
                       </div>
                     </div>
                     
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <div class="addPartnerToggle" id="categoryToggle">
+
+                      </div>
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <div class="addPartnerToggle" id="partnerToggle">
+
+                      </div>
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <div class="addPartnerToggle" id="rewardToggle">
+
+                      </div>
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <div class="addPartnerToggle" id="userRightsToggle"> 
+
+                      </div>
+                    </div>
+                
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <div class="addPartnerToggle" id="approvalToggle">
+
+                      </div>
+                    </div>
+
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                       <div class="addUserFormButton">
                         <button>Submit</button>
@@ -532,6 +499,41 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+  <script>
+    var select = document.getElementById("adminRightsCheckbox");
+    var inputField1 = document.getElementById("reportingToggle");
+    var inputField2 = document.getElementById("rewardToggle");
+    var inputField3 = document.getElementById("categoryToggle");
+    var inputField4 = document.getElementById("partnerToggle");
+    var inputField5 = document.getElementById("userRightsToggle");
+    var inputField6 = document.getElementById("approvalToggle");
+
+    $(select).click(function () {
+      if (select.checked) {
+        $(inputField1).html(" <div class='toggleInner'>Reporting Rights</div><div class='toggleInner'><label class='switch'><input type='checkbox'><span class='slider round'></span> </label> </div>");
+        $(inputField2).html(" <div class='toggleInner'>Special Rewards Rights</div><div class='toggleInner'><label class='switch'><input type='checkbox'><span class='slider round'></span> </label> </div>");
+        $(inputField3).html(" <div class='toggleInner'>Category Rights</div><div class='toggleInner'><label class='switch'><input type='checkbox'><span class='slider round'></span> </label> </div>");
+        $(inputField4).html(" <div class='toggleInner'>Add Partner Rights</div><div class='toggleInner'><label class='switch'><input type='checkbox'><span class='slider round'></span> </label> </div>");
+        $(inputField5).html(" <div class='toggleInner'>Add User Rights</div><div class='toggleInner'><label class='switch'><input type='checkbox'><span class='slider round'></span> </label> </div>");
+        $(inputField6).html(" <div class='toggleInner'>List of Approval Rights Rights</div><div class='toggleInner'><label class='switch'><input type='checkbox'><span class='slider round'></span> </label> </div>");
+
+      }
+
+      else {
+        $(inputField1).html("");
+        $(inputField2).html("");
+        $(inputField3).html("");
+        $(inputField4).html("");
+        $(inputField5).html("");
+        $(inputField6).html("");
+      }
+    });
+
+  </script>
 
 </body>
 
