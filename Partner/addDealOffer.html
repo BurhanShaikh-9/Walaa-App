@@ -376,25 +376,26 @@
                     </div>
 
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <label for="inputName3" class="form-label">Partner Name</label>
-                      <input type="text" class="form-control" id="inputName3" placeholder="Title">
-                    </div>
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <label for="inputName3" class="form-label">Description </label>
+                      <label for="inputName3" class="form-label">Offer Description </label>
                       <input type="text" class="form-control" id="inputName3" placeholder="Description...">
                     </div>
-                   
 
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 row-cols-xxl-6">
-                      <label for="discountCategory" class="form-label">Status</label>
+                      <label for="discountCategory" class="form-label">Offer Status</label>
                       <select class="form-select" aria-label="Default select example" id="discountCategory">
                         <option value="active" selected>Active</option>
                         <option value="inactive">InActive</option>
-
+                      </select>
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 row-cols-xxl-6">
+                      <label for="discountCategory" class="form-label">Offer Refresh Time</label>
+                      <select class="form-select" aria-label="Default select example" id="discountCategory">
+                        <option value="active" selected>12-Hrs</option>
+                        <option value="inactive">24-Hrs</option>
                       </select>
                     </div>
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                      <label for="discountPercent" class="form-label">Validity</label>
+                      <label for="discountPercent" class="form-label">Offer Validity</label>
                       <input type="date" class="form-control" id="discountPercent" placeholder="20%">
                     </div>
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -404,16 +405,31 @@
                         <option value="deal">Deal</option>
                       </select>
                     </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <label for="inputName3" class="form-label">Was Price </label>
+                      <input type="text" class="form-control" id="inputName3" placeholder="Description...">
+                    </div>
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                      <label for="inputName3" class="form-label">Current Price </label>
+                      <input type="text" class="form-control" id="inputName3" placeholder="Description...">
+                    </div>
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " id="discountDeal">
-                      <label for='inputName2' class='form-label'>Discount Percentage</label>
+                      <label for='inputName2' class='form-label'>Percentage</label>
                       <input type='text' class='form-control' id='inputName2' placeholder='10%'>
                     </div>
-
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" id="productSelectId">
-                     
-                 
+                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " id="discountDeal">
+                      <label for='inputName2' class='form-label'>Usage</label>
+                      <div class="usageDiv">
+                        <div>
+                          <label for="singleTimeUsage"> Single Time Usage</label>
+                          <input type="radio" name="usageRadio" id="singleTimeUsage">
+                        </div>
+                        <div>
+                          <label for="MultiTimeUsage"> Multi Time Usage</label>
+                          <input type="radio" name="usageRadio" id="MultiTimeUsage">
+                        </div>
+                      </div>
                     </div>
-
 
                     <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                       <div class="addUserFormButton">
@@ -469,10 +485,10 @@
     var inputField2 = document.getElementById("discountDeal");
     select.addEventListener("change", function () {
       if (select.value === "deal") {
-        $(inputField2).html(" <label for='inputName2' class='form-label'>Deal Amount</label><input type='text' class='form-control' id='inputName2' placeholder='2000 baisa'>")       
+        $(inputField2).html(" <label for='inputName2' class='form-label'>Deal Amount</label><input type='text' class='form-control' id='inputName2' placeholder='2000 baisa'>")
       } else {
 
-        $(inputField2).html(" <label for='inputName2' class='form-label'>Discount Percentage</label><input type='text' class='form-control' id='inputName2' placeholder='20%'>")       
+        $(inputField2).html(" <label for='inputName2' class='form-label'>Discount Percentage</label><input type='text' class='form-control' id='inputName2' placeholder='20%'>")
       }
     });    
   </script>
