@@ -455,6 +455,7 @@ h6 {
 }
 
 .header .search-form input {
+  background-color: white;
   border: 0;
   font-size: 14px;
   color: #012970;
@@ -859,7 +860,7 @@ h6 {
 }
 
 .dashboard .info-card h6 {
-  font-size: 28px;
+  font-size: 20px;
   color: #012970;
   font-weight: 700;
   margin: 0;
@@ -1662,19 +1663,7 @@ justify-content: center;
   border-radius: 10px;
 }
 
-.redeemPoints{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 60px;
-}
 
-.redeemPoints input{
-  width: 50%;
-  height: 40px;
-}
 .redeemPoints button{
   background-color: white;
   border: 1px solid rgb(182, 182, 182);
@@ -1682,6 +1671,7 @@ justify-content: center;
   color: #c4940b;
   padding: 5px 20px 5px 20px;
   border-radius: 5px;
+
 }
 
 .card-title a{
@@ -1711,4 +1701,30 @@ justify-content: center;
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
+}
+.cardTitleWidth{
+ width: 90%;
+}
+.dashboard .sales-card .card-icon{
+  color: rgba(255, 0, 0, 0.815);
+  background: #fdedee;
+}
+.giveRewardDiv{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.giveRewardDivInner{
+  display: flex;
+  gap: 10px;
+}
+.usageDiv{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonCenterDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
