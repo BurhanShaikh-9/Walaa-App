@@ -1671,6 +1671,7 @@ justify-content: center;
   color: #c4940b;
   padding: 5px 20px 5px 20px;
   border-radius: 5px;
+  margin-top: 20px;
 
 }
 
@@ -1728,3 +1729,14 @@ justify-content: center;
   justify-content: center;
   align-items: center;
 }
+.dashboardButton{
+  cursor: pointer;
+  text-align: center;
+}
+.dashboardButton .card {
+  padding-bottom: 0;
+}
+.dashboardButton .card .card-body{
+    padding: 10px  10px  10px  10px;
+    color: #c4940b
+}    

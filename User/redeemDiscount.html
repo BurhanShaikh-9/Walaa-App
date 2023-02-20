@@ -282,7 +282,7 @@
 
                     <li>
                         <a href="customerPoints.html">
-                            <i class="bi bi-circle"></i><span>Add   Points</span>
+                            <i class="bi bi-circle"></i><span>Add Points</span>
                         </a>
                     </li>
                 </ul>
@@ -294,32 +294,32 @@
                 </a>
             </li>
 
-         
-              <li class="nav-item">
+
+            <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#charts-nav2" data-bs-toggle="collapse" href="#">
-                  <i class="bi bi-bar-chart"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-bar-chart"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="charts-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                  <li>
-                    <a href="redeemReport.html">
-                      <i class="bi bi-circle"></i><span>Redeem Points</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="customerPointReport.html">
-                      <i class="bi bi-circle"></i><span>Add Points</span>
-                    </a>
-                  </li>
+                    <li>
+                        <a href="redeemReport.html">
+                            <i class="bi bi-circle"></i><span>Redeem Points</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="customerPointReport.html">
+                            <i class="bi bi-circle"></i><span>Add Points</span>
+                        </a>
+                    </li>
 
-                  <li>
-                    <a href="discountReport.html">
-                      <i class="bi bi-circle"></i><span>Offer</span>
-                    </a>
-                  </li>
-               
+                    <li>
+                        <a href="discountReport.html">
+                            <i class="bi bi-circle"></i><span>Offer</span>
+                        </a>
+                    </li>
+
                 </ul>
-              </li><!-- End Reports Nav --> 
-        
+            </li><!-- End Reports Nav -->
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="login.html">
                     <i class="bi bi-box-arrow-in-right"></i><span>Logout</span>
@@ -358,71 +358,89 @@
                         <div class="card-body">
                             <div class="cardTitleHeading">
                                 <h5 class="card-title">Validate Offer</h5>
-                               
+
                             </div>
 
                             <div class="row userReportMain">
                                 <div class="col-lg-12">
                                     <div class="redeemPoints">
-                                        <input type="text" class="form-control" aria-label="Text input " placeholder="Validate Offer Code...">
-                                        <button>Validate</button>
+                                        <div class="row">
+                                            <div class=" col-lg-6 col-xxl-6 ">
+                                                <label for="">Walaa ID</label>
+                                                <input type="text" class="form-control" aria-label="Text input "
+                                                    placeholder="Validate Offer Code...">
+                                            </div>
+                                            <div class="col-lg-6 col-xxl-6 ">
+                                                <label for="">Validation Code</label>
+                                                <input type="text" class="form-control" aria-label="Text input "
+                                                    placeholder="Validate Offer Code...">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="redeemPoints">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-xxl-6 ">
+                                                <button>Validate</button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Total Offers Validated</h5>
-                      
+
                                         <!-- Line Chart -->
                                         <div id="reportsChart"></div>
                                         <script>
-                                          document.addEventListener("DOMContentLoaded", () => {
-                                            new ApexCharts(document.querySelector("#reportsChart"), {
-                                              series: [{
-                                                name: '',
-                                                data: [11, 32, 45, 32, 34, 52, 41]
-                                              }],
-                                              chart: {
-                                                height: 350,
-                                                type: 'area',
-                                                toolbar: {
-                                                  show: false
-                                                },
-                                              },
-                                              markers: {
-                                                size: 4
-                                              },
-                                              colors: ['#f02128'],
-                                              fill: {
-                                                type: "gradient",
-                                                gradient: {
-                                                  shadeIntensity: 1,
-                                                  opacityFrom: 0.3,
-                                                  opacityTo: 0.4,
-                                                  stops: [0, 90, 100]
-                                                }
-                                              },
-                                              dataLabels: {
-                                                enabled: false
-                                              },
-                                              stroke: {
-                                                curve: 'smooth',
-                                                width: 2
-                                              },
-                                              xaxis: {
-                                                type: 'datetime',
-                                                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-                                              },
-                                              tooltip: {
-                                                x: {
-                                                  format: 'dd/MM/yy HH:mm'
-                                                },
-                                              }
-                                            }).render();
-                                          });
+                                            document.addEventListener("DOMContentLoaded", () => {
+                                                new ApexCharts(document.querySelector("#reportsChart"), {
+                                                    series: [{
+                                                        name: '',
+                                                        data: [11, 32, 45, 32, 34, 52, 41]
+                                                    }],
+                                                    chart: {
+                                                        height: 350,
+                                                        type: 'area',
+                                                        toolbar: {
+                                                            show: false
+                                                        },
+                                                    },
+                                                    markers: {
+                                                        size: 4
+                                                    },
+                                                    colors: ['#f02128'],
+                                                    fill: {
+                                                        type: "gradient",
+                                                        gradient: {
+                                                            shadeIntensity: 1,
+                                                            opacityFrom: 0.3,
+                                                            opacityTo: 0.4,
+                                                            stops: [0, 90, 100]
+                                                        }
+                                                    },
+                                                    dataLabels: {
+                                                        enabled: false
+                                                    },
+                                                    stroke: {
+                                                        curve: 'smooth',
+                                                        width: 2
+                                                    },
+                                                    xaxis: {
+                                                        type: 'datetime',
+                                                        categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                                                    },
+                                                    tooltip: {
+                                                        x: {
+                                                            format: 'dd/MM/yy HH:mm'
+                                                        },
+                                                    }
+                                                }).render();
+                                            });
                                         </script>
                                         <!-- End Line Chart -->
-                      
-                                      </div>
+
+                                    </div>
                                 </div>
-                              <!-- End Reports -->
+                                <!-- End Reports -->
 
                             </div>
 
@@ -437,7 +455,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>WALAA</span></strong>. 
+            &copy; Copyright <strong><span>WALAA</span></strong>.
         </div>
 
     </footer><!-- End Footer -->
